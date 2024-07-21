@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: module-core
+  sql:
+    init:
+      continueOnError: true
+  jpa:
+    generateDdl: false
+    showSql: false
+    hibernate:
+      ddlAuto: none
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        orderInserts: true
+        orderUpdates: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        formatSql: true
+        jdbc:
+          batchSize: 1000
+          lob:
+            nonContextualCreation: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password:
+    hikari:
+      schema: public
+      connection-test-query: SELECT 1
+      connection-init-sql: SELECT 1
+      maximum-pool-size: 100
+      minimum-idle: 10
+      idle-timeout: 30000
+      connection-timeout: 30000
+      auto-commit: true
+      read-only: false
+      data-source-properties:
+        reWriteBatchedInserts: true
+      pool-name: pa-postgres-db-pool

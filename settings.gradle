@@ -1,3 +1,2 @@
 rootProject.name = 'multi-module-example'
-include 'module-core'
-include 'module-project-1'
+include 'module-core', 'module-service', 'module-admin'

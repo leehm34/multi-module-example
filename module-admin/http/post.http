@@ -1,0 +1,2 @@
+### Test
+POST http://localhost:8081/post/ban?id=1
